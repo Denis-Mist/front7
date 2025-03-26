@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Менеджер задач</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Форма авторизации -->
+  <div id="auth">
+    <h2>Вход</h2>
+    <input type="text" id="username" placeholder="Имя пользователя">
+    <button id="loginBtn">Войти</button>
+  </div>
+
+  <!-- Основной интерфейс после авторизации -->
+  <div id="app" class="hidden">
+    <header>
+      <h1>Менеджер задач</h1>
+      <button id="logoutBtn">Выйти</button>
+    </header>
+    <section id="taskForm">
+      <h2>Новая задача</h2>
+      <input type="text" id="taskTitle" placeholder="Заголовок задачи">
+      <textarea id="taskDescription" placeholder="Описание задачи"></textarea>
+      <select id="taskStatus">
+        <option value="новая">Новая</option>
+        <option value="в процессе">В процессе</option>
+        <option value="завершена">Завершена</option>
+      </select>
+      <input type="datetime-local" id="dueDate">
+      <input type="text" id="taskTags" placeholder="Теги (через запятую)">
+      <button id="addTaskBtn">Добавить задачу</button>
+    </section>
+    
+    <section id="tasks">
+      <h2>Список задач</h2>
+      <ul id="taskList"></ul>
+    </section>
+    
+    <!-- Интеграция с календарём -->
+    <section id="calendar">
+      <h2>Календарь задач</h2>
+      <div id="calendarView"></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
