@@ -40,4 +40,6 @@ git clone https://github.com/Denis-Mist/front7
 # Установить зависимости
 cd backend
 node server.js
+cd frontend
+node app.js
 
