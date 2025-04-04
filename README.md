@@ -39,7 +39,11 @@ git clone https://github.com/Denis-Mist/front7
 
 # Установить зависимости
 cd backend
+npm init -y
+npm install express jsonwebtoken body-parser cors
 node server.js
+
+
 cd frontend
 npm init -y
 npm install express
